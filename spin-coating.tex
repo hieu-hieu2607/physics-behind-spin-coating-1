@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{amsmath}
+\setmainlanguage{vietnamese}
+\setmainfont{Times New Roman}
+
+\title{Nguyên lý của Spin coating tạo ra màng mỏng trên đế thủy tinh Sillic Dioxide $SiO_2$}
+\author{Hoàng Minh Hiếu}
+\date{Tháng 10, 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Tổng quan về phương pháp Spin coating}
+- \textbf{Dung dịch để nhỏ lên màng:} sẽ gồm 2 thành phần chính \textbf{dung môi} và \textbf{chất tan}. Dung môi có tác dụng giảm độ nhớt và làm cho chất tan được trải đều trên đế thủy tinh. \newline
+- Về cơ bản, Spin coating bao gồm 5 bước chính: 
+\begin{center}
+    \textbf{Deposition} $\longrightarrow$ \textbf{Spin Up} $\longrightarrow$ \textbf{Spin Off} $\longrightarrow$ \textbf{Evaporation} $\longrightarrow$ \textbf{Baking}
+\end{center}
+- \textbf{Deposition}: Nhỏ dung dịch lên trên đế $SiO_2$. \newline
+- \textbf{Spin Up}: Tăng tốc quay nhanh, để cho hỗn hợp dung dịch được lan ra trên mặt đế. Thường sẽ quay ở vài trăm rpm trong khoảng thời gian ngắn. (VD: 500rpm trong 10s) \newline
+- \textbf{Spin off}: Quay nhanh ở tốc độ ổn định, dung dịch dư sẽ bay ra theo lực li tâm, màng mỏng dần theo thời gian quay. Thường sẽ quay ở vài nghìn rpm trong khoảng thời gian lâu hơn. (VD: 3000rpm trong 45s) \newline
+- \textbf{Evaporation}: Dung môi thừa sẽ bay hơi, chất tan sẽ bám vào mặt đế và màng đặc lại. \newline
+- \textbf{Baking}: Nung làm bay hơi nốt dung môi còn thừa trên mặt, cố định chắc lại màng mỏng.
+
+\section{Nguyên lý lực li tâm}
+- Lực li tâm thực chất là lực quán tính, do hướng chuyển động thay đổi liên tục theo thời gian (chuyển động tròn), nên các chất lỏng sẽ bị bay ra ngoài theo lực quán tính do hướng chuyển động của đế thay đổi liên tục. \newline
+- Công thức lực li tâm: 
+\[f_c = \rho \omega^2 r\]
+$f_c$: Lực li tâm (Centrifugal Force).\newline
+$\rho$: Khối lượng riêng của dung dịch = const ($kg/m^3$). \newline
+$\omega$: Tốc độ quay của tấm kính (rad/s), $\omega = \frac{2\pi N}{60}$ với N là rpm - revolutions per minute.\newline
+$r$: Khoảng cách từ tâm quay đến một điểm cách tâm khoảng r (m). \newline
+- Nhìn vào công thức, ta thấy $f_c \propto \omega^2 \longrightarrow$ Lực li tâm tỉ lệ thuận với bình phương tốc độ quay, nếu tăng $\omega$ lên 2 lần thì $f_c$ tăng lên 4 lần, $\omega$ lên 3 lần thì $f_c$ tăng lên 9 lần, và ngược lại. \newline
+- Ta cũng nhận thấy $f_c \propto r$, nghĩa là với r càng lớn thì $f_c$ sẽ càng lớn $\longrightarrow$ lượng dung dịch ở càng xa tâm thì chịu lực li tâm càng lớn. 
+
+\section{Lực cản trở}
+- $\eta$ là độ nhớt của một dung dịch, lý do dung dịch là hỗn hợp của dung môi và chất tan là vì dung môi sẽ làm giảm độ nhớt của chất tan thuần, giúp phân bố chất tan đồng đều hơn trên bề mặt đế $SiO_2$. \newline
+- Độ nhớt sẽ làm cản trở các lớp chất lỏng dung dịch trượt qua nhau, độ nhớt càng lớn thì trượt càng khó, độ nhớt càng nhỏ thì trượt càng dễ. Khi màng càng mỏng dần, lực ma sát nhớt càng lớn ($h \propto \frac{1}{\eta}$). Kết hợp với sự bay hơi của dung môi $\longrightarrow$ màng càng mỏng theo thời gian do sự mất đi thể tích dung môi trên 1 diện tích đế cố định. \newline
+- Lớp dung dịch tiếp xúc trực tiếp với bề mặt đế sẽ khó bị trượt nhất, sự ma sát sẽ được củng cố thêm sau khi đế thủy tinh đã được xử lý qua \textbf{Plasma}, các lớp bên trên sẽ trượt qua lớp tiếp xúc trực tiếp với mặt đế này.
+
+\section{Độ dày của màng theo thời gian}
+\[\frac{dh}{dt}=-\frac{2 \rho \omega^2 h^3}{3\eta}\]
+h: Độ dày của màng \newline
+$\rho$: Khối lượng riêng của dung dịch = const ($kg/m^3$). \newline
+$\omega$: Tốc độ quay của tấm kính (rad/s), $\omega = \frac{2\pi N}{60}$ với N là rpm - revolutions per minute.\newline
+$\eta$: Độ nhớt của dung dịch.\newline
+- Ý nghĩa của dấu (-): Độ dày của màng giảm đi theo thời gian. \newline
+- ($-h^3$): Tại các vị trí mà màng càng dày tại thời điểm $t_0$, màng sẽ mỏng đi càng nhanh nếu màng càng dày. \newline
+- ($-\frac{1}{\eta}$): Độ nhớt sẽ làm giảm tác dụng của lực li tâm. \newline
+- Công thức\textbf{ Emslie - Bonner - Peck}: 
+\[h(t)=\frac{h_o}{\sqrt{1+\frac{4 \rho \omega^2 h_o^2}{3\eta}\cdot t}}\]
+\begin{center}
+    Mô tả độ dày của màng tại thời điểm t.
+\end{center}
+
+\end{document}
